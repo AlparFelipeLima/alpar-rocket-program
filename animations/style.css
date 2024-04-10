@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes translation {
+    0% {
+        transform: translate(-100px);
+    }
+
+    100% {
+        transform: translate(100px);
+    }
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: brown;
+    transform: rotate(0deg);
+    /* animation-name: rotation, translation; */
+    animation: rotation 1s infinite linear, translation 1s infinite alternate;
+}

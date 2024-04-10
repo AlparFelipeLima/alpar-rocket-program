@@ -1,0 +1,17 @@
+p {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 16px;
+}
+
+p.open {
+    background-color: rgb(4, 184, 88);
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}

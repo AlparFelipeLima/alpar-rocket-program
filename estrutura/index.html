@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando a estrutura</title>
+</head>
+<body>
+    <div class="item">Olá
+        <div>Teste</div>
+    </div>
+    <div class="container">
+        <div class="item" data-teste="1">Olá
+            <div>Teste</div>
+        </div>
+        Mundo
+    </div>
+
+    <script>
+        const containerEl = document.querySelector(".container")
+        const itemEl = containerEl.querySelector(".item")
+
+        console.dir(itemEl)
+
+        // containerEl.appendChild(itemEl)
+        // document.body.removeChild(itemEl)
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        const text = document.createElement("p");
+        card.classList.add("card-text");
+        const button = document.createElement("a");
+        card.classList.add("card-button");
+        text.innerHTML = "Compre nosso produto!";
+        button.innerHTML = "Comprar";
+        button.href = "/compras/produto1"
+        card.appendChild(text);
+        card.appendChild(button);
+        document.body.appendChild(card);
+    </script>
+</body>
+</html>

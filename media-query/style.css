@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+@media (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: #adb5bd;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card h2 {
+    padding: 16px;
+    background-color: #dee2e6;
+}
+
+.card p {
+    padding: 16px;
+}
