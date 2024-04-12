@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <h1>Olá</h1>
+    <p>Olá pessoal</p>
+
+    <script>
+        function ifIsTrue() {
+            console.log('verdade')
+        }
+        function ifIsFalse() {
+            console.log('falso')
+        }
+
+        function ifCallback(value, isTrue, isFalse) {
+            if (value) {
+                isTrue()
+            } else {
+                isFalse()
+            }
+        }
+
+        ifCallback(false, ifIsTrue, ifIsFalse)
+
+        function meuTimeout(handler, timeout) {
+            const init = Date.now()
+            const end = init + timeout * 1000
+
+            while (Date.now() < end) {
+            }
+
+            handler()
+        }
+
+        meuTimeout(() => {
+            console.log("Terminou")
+        }, 5);
+
+        console.log("Próxima execução")
+    </script>
+</body>
+
+</html>
