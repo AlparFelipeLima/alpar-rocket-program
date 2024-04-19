@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+}
+
+.buttons button {
+    font-size: 24px;
+    padding: 16px 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.house {
+    flex: 1;
+    padding: 32px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 4fr 3fr 3fr 2fr 3fr;
+    grid-template-areas: 'r r r'
+                         'l k h'
+                         'b1 b1 h'
+                         'b b h'
+                         'b2 b2 b2';
+}
+
+.house div {
+    color: #fff;
+    background-color: #111;
+    font-size: 24px;
+    border: 5px solid black;
+    padding: 8px;
+    display: flex;
+}
+
+.house div.active {
+    background-color: yellow;
+    color: #000;
+}
+
+.room-view {
+    grid-area: r;
+}
+.kitchen-view {
+    grid-area: k;
+}
+.laundry-view {
+    grid-area: l;
+}
+.hallway-view {
+    grid-area: h;
+}
+.bathroom-view {
+    grid-area: b;
+}
+.bedroom1-view {
+    grid-area: b1;
+}
+.bedroom2-view {
+    grid-area: b2;
+}

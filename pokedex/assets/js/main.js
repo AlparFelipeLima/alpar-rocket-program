@@ -54,9 +54,9 @@ function showPokemon(pokemon) {
         return false
     })
     const text = flavorText.flavor_text
-        .replaceAll("\n", '')
-        .replaceAll("\t", '')
-        .replaceAll("", '')
+        .replaceAll("\n", ' ')
+        .replaceAll("\t", ' ')
+        .replaceAll("", ' ')
 
 
     pokemonListEl.innerHTML += `
